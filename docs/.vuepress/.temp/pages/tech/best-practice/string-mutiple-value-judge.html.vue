@@ -1,0 +1,18 @@
+<template><div><h2 id="_1-多个字符串的匹配" tabindex="-1"><a class="header-anchor" href="#_1-多个字符串的匹配" aria-hidden="true">#</a> 1. 多个字符串的匹配</h2>
+<p>在业务逻辑中，不乏包含这类逻辑：判断标志位flag是否为<code v-pre>&quot;ONE&quot;</code>或<code v-pre>&quot;TWO&quot;</code>或<code v-pre>&quot;THREE&quot;</code>。</p>
+<div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code><span class="token keyword">if</span> <span class="token punctuation">(</span>flag<span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span><span class="token string">"ONE"</span><span class="token punctuation">)</span> <span class="token operator">||</span> flag<span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span><span class="token string">"TWO"</span><span class="token punctuation">)</span> <span class="token operator">||</span> flag<span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span><span class="token string">"THREE"</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">/* 业务逻辑 */</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>事实上，我们可以使用Arrays.asList()方法来优化它，而不是使用stream api：</p>
+<div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">asList</span><span class="token punctuation">(</span><span class="token string">"ONE"</span><span class="token punctuation">,</span> <span class="token string">"TWO"</span><span class="token punctuation">,</span> <span class="token string">"THREE"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span>flag<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">/* 业务逻辑 */</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="_2-多个字符的匹配" tabindex="-1"><a class="header-anchor" href="#_2-多个字符的匹配" aria-hidden="true">#</a> 2. 多个字符的匹配</h2>
+<p>这种业务逻辑更特殊：判断标志位flag是否为<code v-pre>'O'</code>或<code v-pre>'T'</code>或<code v-pre>&quot;R&quot;</code>。</p>
+<div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token string">"OTR"</span><span class="token punctuation">.</span><span class="token function">conntains</span><span class="token punctuation">(</span>flag<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">/* 业务逻辑 */</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>虽然这种方法很特殊，只能用在字符的匹配上，而不能用于字符串。但是越是使用范围小的方法，在恰当的时候使用，越是精巧。</p>
+</div></template>
+
+
