@@ -25,8 +25,12 @@ export const pagesComponents = {
   "v-5deafbd7": defineAsyncComponent(() => import(/* webpackChunkName: "v-5deafbd7" */"D:/Document/Blog/seekwindjh.github.io/docs/.vuepress/.temp/pages/posts/article12.html.vue")),
   // path: /posts/article9.html
   "v-7beb5be1": defineAsyncComponent(() => import(/* webpackChunkName: "v-7beb5be1" */"D:/Document/Blog/seekwindjh.github.io/docs/.vuepress/.temp/pages/posts/article9.html.vue")),
+  // path: /tech/docker.html
+  "v-0b40148e": defineAsyncComponent(() => import(/* webpackChunkName: "v-0b40148e" */"D:/Document/Blog/seekwindjh.github.io/docs/.vuepress/.temp/pages/tech/docker.html.vue")),
   // path: /tech/
   "v-15551100": defineAsyncComponent(() => import(/* webpackChunkName: "v-15551100" */"D:/Document/Blog/seekwindjh.github.io/docs/.vuepress/.temp/pages/tech/index.html.vue")),
+  // path: /tech/websockets.html
+  "v-058649cd": defineAsyncComponent(() => import(/* webpackChunkName: "v-058649cd" */"D:/Document/Blog/seekwindjh.github.io/docs/.vuepress/.temp/pages/tech/websockets.html.vue")),
   // path: /posts/article/article1.html
   "v-03842690": defineAsyncComponent(() => import(/* webpackChunkName: "v-03842690" */"D:/Document/Blog/seekwindjh.github.io/docs/.vuepress/.temp/pages/posts/article/article1.html.vue")),
   // path: /posts/article/article2.html
@@ -47,6 +51,8 @@ export const pagesComponents = {
   "v-454de1b1": defineAsyncComponent(() => import(/* webpackChunkName: "v-454de1b1" */"D:/Document/Blog/seekwindjh.github.io/docs/.vuepress/.temp/pages/tech/best-practice/string-multiple-prefix-judge.html.vue")),
   // path: /tech/best-practice/string-mutiple-value-judge.html
   "v-08107d30": defineAsyncComponent(() => import(/* webpackChunkName: "v-08107d30" */"D:/Document/Blog/seekwindjh.github.io/docs/.vuepress/.temp/pages/tech/best-practice/string-mutiple-value-judge.html.vue")),
+  // path: /tech/design/rtc-module.html
+  "v-428f9330": defineAsyncComponent(() => import(/* webpackChunkName: "v-428f9330" */"D:/Document/Blog/seekwindjh.github.io/docs/.vuepress/.temp/pages/tech/design/rtc-module.html.vue")),
   // path: /tech/java/generic-erasure-and-generic-array.html
   "v-15d00e9a": defineAsyncComponent(() => import(/* webpackChunkName: "v-15d00e9a" */"D:/Document/Blog/seekwindjh.github.io/docs/.vuepress/.temp/pages/tech/java/generic-erasure-and-generic-array.html.vue")),
   // path: /tech/java/stream-api.html
@@ -55,6 +61,8 @@ export const pagesComponents = {
   "v-52f6a547": defineAsyncComponent(() => import(/* webpackChunkName: "v-52f6a547" */"D:/Document/Blog/seekwindjh.github.io/docs/.vuepress/.temp/pages/tech/middleware/caddy-server.html.vue")),
   // path: /tech/middleware/rabbitmq.html
   "v-095ac79e": defineAsyncComponent(() => import(/* webpackChunkName: "v-095ac79e" */"D:/Document/Blog/seekwindjh.github.io/docs/.vuepress/.temp/pages/tech/middleware/rabbitmq.html.vue")),
+  // path: /tech/middleware/redis.html
+  "v-a817f04a": defineAsyncComponent(() => import(/* webpackChunkName: "v-a817f04a" */"D:/Document/Blog/seekwindjh.github.io/docs/.vuepress/.temp/pages/tech/middleware/redis.html.vue")),
   // path: /404.html
   "v-3706649a": defineAsyncComponent(() => import(/* webpackChunkName: "v-3706649a" */"D:/Document/Blog/seekwindjh.github.io/docs/.vuepress/.temp/pages/404.html.vue")),
   // path: /category/

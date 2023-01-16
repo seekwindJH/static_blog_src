@@ -23,8 +23,12 @@ export const pagesData = {
   "v-5deafbd7": () => import(/* webpackChunkName: "v-5deafbd7" */"D:/Document/Blog/seekwindjh.github.io/docs/.vuepress/.temp/pages/posts/article12.html.js").then(({ data }) => data),
   // path: /posts/article9.html
   "v-7beb5be1": () => import(/* webpackChunkName: "v-7beb5be1" */"D:/Document/Blog/seekwindjh.github.io/docs/.vuepress/.temp/pages/posts/article9.html.js").then(({ data }) => data),
+  // path: /tech/docker.html
+  "v-0b40148e": () => import(/* webpackChunkName: "v-0b40148e" */"D:/Document/Blog/seekwindjh.github.io/docs/.vuepress/.temp/pages/tech/docker.html.js").then(({ data }) => data),
   // path: /tech/
   "v-15551100": () => import(/* webpackChunkName: "v-15551100" */"D:/Document/Blog/seekwindjh.github.io/docs/.vuepress/.temp/pages/tech/index.html.js").then(({ data }) => data),
+  // path: /tech/websockets.html
+  "v-058649cd": () => import(/* webpackChunkName: "v-058649cd" */"D:/Document/Blog/seekwindjh.github.io/docs/.vuepress/.temp/pages/tech/websockets.html.js").then(({ data }) => data),
   // path: /posts/article/article1.html
   "v-03842690": () => import(/* webpackChunkName: "v-03842690" */"D:/Document/Blog/seekwindjh.github.io/docs/.vuepress/.temp/pages/posts/article/article1.html.js").then(({ data }) => data),
   // path: /posts/article/article2.html
@@ -45,6 +49,8 @@ export const pagesData = {
   "v-454de1b1": () => import(/* webpackChunkName: "v-454de1b1" */"D:/Document/Blog/seekwindjh.github.io/docs/.vuepress/.temp/pages/tech/best-practice/string-multiple-prefix-judge.html.js").then(({ data }) => data),
   // path: /tech/best-practice/string-mutiple-value-judge.html
   "v-08107d30": () => import(/* webpackChunkName: "v-08107d30" */"D:/Document/Blog/seekwindjh.github.io/docs/.vuepress/.temp/pages/tech/best-practice/string-mutiple-value-judge.html.js").then(({ data }) => data),
+  // path: /tech/design/rtc-module.html
+  "v-428f9330": () => import(/* webpackChunkName: "v-428f9330" */"D:/Document/Blog/seekwindjh.github.io/docs/.vuepress/.temp/pages/tech/design/rtc-module.html.js").then(({ data }) => data),
   // path: /tech/java/generic-erasure-and-generic-array.html
   "v-15d00e9a": () => import(/* webpackChunkName: "v-15d00e9a" */"D:/Document/Blog/seekwindjh.github.io/docs/.vuepress/.temp/pages/tech/java/generic-erasure-and-generic-array.html.js").then(({ data }) => data),
   // path: /tech/java/stream-api.html
@@ -53,6 +59,8 @@ export const pagesData = {
   "v-52f6a547": () => import(/* webpackChunkName: "v-52f6a547" */"D:/Document/Blog/seekwindjh.github.io/docs/.vuepress/.temp/pages/tech/middleware/caddy-server.html.js").then(({ data }) => data),
   // path: /tech/middleware/rabbitmq.html
   "v-095ac79e": () => import(/* webpackChunkName: "v-095ac79e" */"D:/Document/Blog/seekwindjh.github.io/docs/.vuepress/.temp/pages/tech/middleware/rabbitmq.html.js").then(({ data }) => data),
+  // path: /tech/middleware/redis.html
+  "v-a817f04a": () => import(/* webpackChunkName: "v-a817f04a" */"D:/Document/Blog/seekwindjh.github.io/docs/.vuepress/.temp/pages/tech/middleware/redis.html.js").then(({ data }) => data),
   // path: /404.html
   "v-3706649a": () => import(/* webpackChunkName: "v-3706649a" */"D:/Document/Blog/seekwindjh.github.io/docs/.vuepress/.temp/pages/404.html.js").then(({ data }) => data),
   // path: /category/
