@@ -2,7 +2,6 @@
 title: 泛型擦除与泛型数组
 date: 2022-06-22 16:31:07
 ---
-# 泛型擦除与泛型数组
 
 什么是泛型擦除？为什么不能有泛型数组？
 
@@ -37,6 +36,17 @@ objectArr.add("hello");
 
 > 数组类型在运行时强化，泛型类型在运行时擦除。
 
+### Tips1. 使用TypeReference声明泛型类本身
+
+基于以上的观点，泛型在使用`.class`属性或者`.getClass()`方法时，无法获取到真正的泛型类，而只会得到泛型的基类（例如`Map`,`List`等）。一般我们使用`TypeReference`来声明泛型类本身。在下面的例子中，我们使用了Hutool工具包内的`JSONUtils.toBean()`方法，将一个JSON字符串反序列化为一个`Nap<String, String>`。
+
+```java
+// 正确的
+Map<String, String> map = JSONUtils.toBean("{'A':'a','B':'b'}", new TypeReference<Map<String, String>>() {});
+// 错误的，运行时Map<String, String>.class == Map.class
+Map<String, String> map = JSONUtils.toBean("{'A':'a','B':'b'}", Map<String, String>.class);
+```
+
 ## 2. 泛型数组
 
 了解了数组在运行时加强，泛型在运行时擦除这一特点后，我们无意中想到一个骚操作，用数组的继承特性破坏泛型的非继承性：
@@ -57,3 +67,6 @@ objects[0] = intList; // Without ArrayStoreException
 List<List<String>> stringLists = new ArrayList<>();
 ```
 > 创建泛型数组是非法的
+
+
+## 3.
