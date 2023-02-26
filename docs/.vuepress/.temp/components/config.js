@@ -1,9 +1,9 @@
-import { useStyleTag } from "D:/Document/Blog/seekwindjh.github.io/node_modules/vuepress-plugin-components/lib/client/composables/index.js";
+import { useStyleTag } from "C:/Users/SeekWind/Documents/seekwindjh.github.io/node_modules/vuepress-plugin-components/lib/client/composables/index.js";
 import { h } from "vue";
 import { defineClientConfig } from "@vuepress/client";
-import Badge from "D:/Document/Blog/seekwindjh.github.io/node_modules/vuepress-plugin-components/lib/client/components/Badge.js";
-import FontIcon from "D:/Document/Blog/seekwindjh.github.io/node_modules/vuepress-plugin-components/lib/client/components/FontIcon.js";
-import BackToTop from "D:/Document/Blog/seekwindjh.github.io/node_modules/vuepress-plugin-components/lib/client/components/BackToTop.js";
+import Badge from "C:/Users/SeekWind/Documents/seekwindjh.github.io/node_modules/vuepress-plugin-components/lib/client/components/Badge.js";
+import FontIcon from "C:/Users/SeekWind/Documents/seekwindjh.github.io/node_modules/vuepress-plugin-components/lib/client/components/FontIcon.js";
+import BackToTop from "C:/Users/SeekWind/Documents/seekwindjh.github.io/node_modules/vuepress-plugin-components/lib/client/components/BackToTop.js";
 
 
 export default defineClientConfig({
