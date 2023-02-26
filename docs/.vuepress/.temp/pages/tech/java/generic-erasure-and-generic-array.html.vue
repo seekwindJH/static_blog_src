@@ -1,5 +1,4 @@
-<template><div><h1 id="泛型擦除与泛型数组" tabindex="-1"><a class="header-anchor" href="#泛型擦除与泛型数组" aria-hidden="true">#</a> 泛型擦除与泛型数组</h1>
-<p>什么是泛型擦除？为什么不能有泛型数组？</p>
+<template><div><p>什么是泛型擦除？为什么不能有泛型数组？</p>
 <!-- more -->
 <h2 id="_1-泛型擦除" tabindex="-1"><a class="header-anchor" href="#_1-泛型擦除" aria-hidden="true">#</a> 1. 泛型擦除</h2>
 <p>在许多编程语言中，都有泛型的概念。例如在Java中，我们最常用的泛型是<code v-pre>ArrayList&lt;T&gt;</code>，它提供了类似<code v-pre>T[]</code>的功能。但实际上，两者有着本质的区别：</p>
@@ -43,7 +42,13 @@ objectArr<span class="token punctuation">.</span><span class="token function">ad
 <blockquote>
 <p>数组类型在运行时强化，泛型类型在运行时擦除。</p>
 </blockquote>
-<h2 id="_2-泛型数组" tabindex="-1"><a class="header-anchor" href="#_2-泛型数组" aria-hidden="true">#</a> 2. 泛型数组</h2>
+<h3 id="tips1-使用typereference声明泛型类本身" tabindex="-1"><a class="header-anchor" href="#tips1-使用typereference声明泛型类本身" aria-hidden="true">#</a> Tips1. 使用TypeReference声明泛型类本身</h3>
+<p>基于以上的观点，泛型在使用<code v-pre>.class</code>属性或者<code v-pre>.getClass()</code>方法时，无法获取到真正的泛型类，而只会得到泛型的基类（例如<code v-pre>Map</code>,<code v-pre>List</code>等）。一般我们使用<code v-pre>TypeReference</code>来声明泛型类本身。在下面的例子中，我们使用了Hutool工具包内的<code v-pre>JSONUtils.toBean()</code>方法，将一个JSON字符串反序列化为一个<code v-pre>Nap&lt;String, String&gt;</code>。</p>
+<div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code><span class="token comment">// 正确的</span>
+<span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">String</span><span class="token punctuation">></span></span> map <span class="token operator">=</span> <span class="token class-name">JSONUtils</span><span class="token punctuation">.</span><span class="token function">toBean</span><span class="token punctuation">(</span><span class="token string">"{'A':'a','B':'b'}"</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">TypeReference</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Map</span><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">String</span><span class="token punctuation">></span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 错误的，运行时Map&lt;String, String>.class == Map.class</span>
+<span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">String</span><span class="token punctuation">></span></span> map <span class="token operator">=</span> <span class="token class-name">JSONUtils</span><span class="token punctuation">.</span><span class="token function">toBean</span><span class="token punctuation">(</span><span class="token string">"{'A':'a','B':'b'}"</span><span class="token punctuation">,</span> <span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">String</span><span class="token punctuation">></span></span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="_2-泛型数组" tabindex="-1"><a class="header-anchor" href="#_2-泛型数组" aria-hidden="true">#</a> 2. 泛型数组</h2>
 <p>了解了数组在运行时加强，泛型在运行时擦除这一特点后，我们无意中想到一个骚操作，用数组的继承特性破坏泛型的非继承性：</p>
 <div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">></span></span><span class="token punctuation">[</span><span class="token punctuation">]</span> stringLists <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span> 
 <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">></span></span> intList <span class="token operator">=</span> <span class="token class-name">List</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// create an integer List</span>
@@ -59,6 +64,7 @@ objects<span class="token punctuation">[</span><span class="token number">0</spa
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><blockquote>
 <p>创建泛型数组是非法的</p>
 </blockquote>
+<h2 id="_3" tabindex="-1"><a class="header-anchor" href="#_3" aria-hidden="true">#</a> 3.</h2>
 </div></template>
 
 
