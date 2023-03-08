@@ -49,12 +49,12 @@ export const pagesData = {
   "v-454de1b1": () => import(/* webpackChunkName: "v-454de1b1" */"C:/Users/SeekWind/Documents/seekwindjh.github.io/docs/.vuepress/.temp/pages/tech/best-practice/string-multiple-prefix-judge.html.js").then(({ data }) => data),
   // path: /tech/best-practice/string-mutiple-value-judge.html
   "v-08107d30": () => import(/* webpackChunkName: "v-08107d30" */"C:/Users/SeekWind/Documents/seekwindjh.github.io/docs/.vuepress/.temp/pages/tech/best-practice/string-mutiple-value-judge.html.js").then(({ data }) => data),
-  // path: /tech/design/rtc-module.html
-  "v-428f9330": () => import(/* webpackChunkName: "v-428f9330" */"C:/Users/SeekWind/Documents/seekwindjh.github.io/docs/.vuepress/.temp/pages/tech/design/rtc-module.html.js").then(({ data }) => data),
   // path: /tech/java/generic-erasure-and-generic-array.html
   "v-15d00e9a": () => import(/* webpackChunkName: "v-15d00e9a" */"C:/Users/SeekWind/Documents/seekwindjh.github.io/docs/.vuepress/.temp/pages/tech/java/generic-erasure-and-generic-array.html.js").then(({ data }) => data),
   // path: /tech/java/stream-api.html
   "v-577d1dbf": () => import(/* webpackChunkName: "v-577d1dbf" */"C:/Users/SeekWind/Documents/seekwindjh.github.io/docs/.vuepress/.temp/pages/tech/java/stream-api.html.js").then(({ data }) => data),
+  // path: /tech/design/rtc-module.html
+  "v-428f9330": () => import(/* webpackChunkName: "v-428f9330" */"C:/Users/SeekWind/Documents/seekwindjh.github.io/docs/.vuepress/.temp/pages/tech/design/rtc-module.html.js").then(({ data }) => data),
   // path: /tech/middleware/caddy-server.html
   "v-52f6a547": () => import(/* webpackChunkName: "v-52f6a547" */"C:/Users/SeekWind/Documents/seekwindjh.github.io/docs/.vuepress/.temp/pages/tech/middleware/caddy-server.html.js").then(({ data }) => data),
   // path: /tech/middleware/rabbitmq.html

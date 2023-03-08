@@ -51,12 +51,12 @@ export const pagesComponents = {
   "v-454de1b1": defineAsyncComponent(() => import(/* webpackChunkName: "v-454de1b1" */"C:/Users/SeekWind/Documents/seekwindjh.github.io/docs/.vuepress/.temp/pages/tech/best-practice/string-multiple-prefix-judge.html.vue")),
   // path: /tech/best-practice/string-mutiple-value-judge.html
   "v-08107d30": defineAsyncComponent(() => import(/* webpackChunkName: "v-08107d30" */"C:/Users/SeekWind/Documents/seekwindjh.github.io/docs/.vuepress/.temp/pages/tech/best-practice/string-mutiple-value-judge.html.vue")),
-  // path: /tech/design/rtc-module.html
-  "v-428f9330": defineAsyncComponent(() => import(/* webpackChunkName: "v-428f9330" */"C:/Users/SeekWind/Documents/seekwindjh.github.io/docs/.vuepress/.temp/pages/tech/design/rtc-module.html.vue")),
   // path: /tech/java/generic-erasure-and-generic-array.html
   "v-15d00e9a": defineAsyncComponent(() => import(/* webpackChunkName: "v-15d00e9a" */"C:/Users/SeekWind/Documents/seekwindjh.github.io/docs/.vuepress/.temp/pages/tech/java/generic-erasure-and-generic-array.html.vue")),
   // path: /tech/java/stream-api.html
   "v-577d1dbf": defineAsyncComponent(() => import(/* webpackChunkName: "v-577d1dbf" */"C:/Users/SeekWind/Documents/seekwindjh.github.io/docs/.vuepress/.temp/pages/tech/java/stream-api.html.vue")),
+  // path: /tech/design/rtc-module.html
+  "v-428f9330": defineAsyncComponent(() => import(/* webpackChunkName: "v-428f9330" */"C:/Users/SeekWind/Documents/seekwindjh.github.io/docs/.vuepress/.temp/pages/tech/design/rtc-module.html.vue")),
   // path: /tech/middleware/caddy-server.html
   "v-52f6a547": defineAsyncComponent(() => import(/* webpackChunkName: "v-52f6a547" */"C:/Users/SeekWind/Documents/seekwindjh.github.io/docs/.vuepress/.temp/pages/tech/middleware/caddy-server.html.vue")),
   // path: /tech/middleware/rabbitmq.html

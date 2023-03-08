@@ -43,6 +43,9 @@ objectArr.add("hello");
 ```java
 // 正确的
 Map<String, String> map = JSONUtils.toBean("{'A':'a','B':'b'}", new TypeReference<Map<String, String>>() {});
+```
+
+```java
 // 错误的，运行时Map<String, String>.class == Map.class
 Map<String, String> map = JSONUtils.toBean("{'A':'a','B':'b'}", Map<String, String>.class);
 ```
@@ -68,5 +71,3 @@ List<List<String>> stringLists = new ArrayList<>();
 ```
 > 创建泛型数组是非法的
 
-
-## 3.
