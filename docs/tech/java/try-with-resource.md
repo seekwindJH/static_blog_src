@@ -82,3 +82,39 @@ try (Connection connection = dataSource.getConnection();) {
 2. 难以定制化关闭资源时的异常的后续操作。例如，如果connection关闭失败，我想在控制台打印日志"连接关闭异常"；如果ps关闭失败，我想在控制台打印"数据库预处理语句关闭异常"。那么，我们使用Try With Resource语法时，依然需要将其写成上面嵌套try的形式。
 
 3. 资源类必须实现AutoCloseable接口。可能有些坑人的第三方库中的资源类未实现该接口，我们只要避免使用这些第三方库即可，这倒不是大问题。
+
+## 3. 替代Try With Resource的优雅方案
+
+将关闭资源的逻辑封装成一个函数，然后我们手动在finally模块中使用这个函数来关闭资源。由于`isClosed()`方法并非`Closeable`和`AutoCloseable`接口所有，因此我们不能在关闭资源的函数中使用它。因此我们需要确保该资源的`close()`函数是幂等的，避免该资源对象已被关闭，导致再次关闭的异常，避免catch捕获到这个异常（当然，如果有需要，也可以捕获它）。
+
+```java
+public class MyService {
+  @Autowired
+  private DataSource dataSource;
+  public static void main(String[] args) {
+    Connection connection = null;
+    PrepareStatement ps = null;
+    try {
+      connection = dataSource.getConnection();
+      ps = connection.createPrepareStatement();
+      // do someting
+    } catch (SQLExpection e) {
+      // deal with exception
+    } finally {
+      closeResource(ps);
+      closeResource(connection);
+    }
+  }
+
+  public static void closeResource(Closeable c) {
+    if (c == null) {
+      return;
+    }
+    try {
+      c.close();
+    } catch (SQLExpection e) {
+      // deal with exception
+    }
+  }
+}
+```
